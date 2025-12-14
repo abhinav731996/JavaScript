@@ -67,9 +67,40 @@ console.log(a);
 {
     let a = 5;
     console.log(a);
-}
+};
 {
     let a = 10;
     console.log(a);
     
-}
+};
+
+//object
+
+const student = {
+    fname: "Rahul",
+    age: 22,
+    cgpa: 6.2,
+    isPass: true,
+};
+
+student["age"] = student["age"] +2; // to change values 
+
+console.log(student.age);   // how to call values 
+console.log(student["age"]);    // how to call values 
+
+//##################### best practice #######################
+
+const product = {
+    title: "ball pen",
+    reating: 4,
+    offer: 5,
+    price: 270
+};
+
+
+const profile = {
+    userName: "@abhi_3607",
+    isFollow: false,
+    follwers: 123,
+    following: 112
+};
