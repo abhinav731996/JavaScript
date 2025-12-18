@@ -55,11 +55,48 @@
 // }
 
 
-// Questions
-
+// Questions-1
 // find even number from 0-100
 
-let word ="hello";
-console.log(word.length);
+// for (let num = 0; num <=10; num++){
+//     if (num%2===0) {
+//         console.log("num =", num, "even number");
+        
+//     }
+//     else{
+//         console.log("num =", num, "odd number");
+        
+//     }
+// };
 
+
+// Question-2
+// guss the number
+
+
+// let gameNumber = 25;
+
+// let userNum = prompt("Guess the game number: ");
+// console.log(userNum);
+
+// while (userNum != gameNumber) {
+//    userNum = prompt("You enterd wrong number please try again....")
+// }
+
+// console.log("Congratulation your enter the right number!!");
+
+
+// template literials
+// let obj = {
+//     item: "pen",
+//     price: 10,
+// }
+// console.log(`the price of ${obj.item} is ${obj.price} rupees`);
+
+
+// Question-3
+
+let fullName = prompt("Enter your fullname without space: ");
+let userName = "@" + fullName + fullName.length
+console.log(userName);
 
