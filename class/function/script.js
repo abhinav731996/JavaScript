@@ -48,10 +48,43 @@
 
 
 
-let num = [1,2,3,4,5,6];
-let result =[];
-for (let i = 0; i < num.length; i++) {
-    result.push(num[i] + 2);
+// let num = [1,2,3,4,5,6];
+// let result =[];
+// for (let i = 0; i < num.length; i++) {
+//     result.push(num[i] + 2);
     
-}
-console.log(result);
+// };
+
+// console.log(result);
+
+
+
+// ***************** function expression
+
+// returnSum(5,7) // will generate error 
+// let returnSum = function (a,b){
+//     let sum = +a + +b;
+//     console.log(sum);
+//     return sum
+    
+// }
+// returnSum(5,7);
+
+
+
+
+// **************** Arrow function
+
+// let abc = () => console.log("this is from arrow function");
+
+// abc();
+
+// let def = (a,b) => {
+//     return (a + b);
+// }
+// let sum1 = def(4,5);
+// console.log(sum1);
+
+
+
+// ************** String
