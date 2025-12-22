@@ -8,16 +8,37 @@
 
 
 // toFixed()
-console.log((40/6).toFixed(2));
+// console.log((40/6).toFixed(2));
 
 
-let input = "40a967";
-console.log(typeof(input));
+// let input = "40a967";
+// console.log(typeof(input));
 
-let inputInt = parseInt(input);
-console.log(inputInt, typeof(inputInt));
+// let inputInt = parseInt(input);
+// console.log(inputInt, typeof(inputInt));
 
-let inputFlot = parseFloat(input);
-console.log(input, typeof inputFlot);
+// let inputFlot = parseFloat(input);
+// console.log(input, typeof inputFlot);
 
-console.log(input/2);
+// console.log(input/2);
+
+
+
+
+// ************* Date
+
+let now = new Date();
+console.log(now);
+
+// let newYear = new Date("2026-01-01 05:30:01"); // for terminal because indain standard time is GMT+5:30
+let newYear = new Date("2026-01-01 00:00:01"); // for browser
+console.log(newYear);
+console.log(newYear.toDateString());  // to make terminal according to your date 
+
+
+console.log(newYear.getDate());
+console.log(newYear.getDay());
+console.log(newYear.getMonth());
+console.log(newYear.getFullYear());
+console.log(newYear.getHours());
+console.log(newYear.getTime());
