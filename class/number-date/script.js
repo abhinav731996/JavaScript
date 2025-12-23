@@ -30,10 +30,10 @@
 let now = new Date();
 console.log(now);
 
-// let newYear = new Date("2026-01-01 05:30:01"); // for terminal because indain standard time is GMT+5:30
-let newYear = new Date("2026-01-01 00:00:01"); // for browser
-console.log(newYear);
-console.log(newYear.toDateString());  // to make terminal according to your date 
+// let newYear = new Date("2026-01-01 05:30:01");   // for terminal because indain standard time is GMT+5:30
+let newYear = new Date("2026-01-01 00:00:01");
+console.log(newYear);    // for browser
+console.log(newYear.toDateString());    // to make terminal according to your date 
 
 
 console.log(newYear.getDate());
