@@ -16,13 +16,13 @@ console.log(user);
 console.log(user.full_name);
 console.log(user['parmanent-address']);          //to call a string 
 console.log(user.getAge());
-console.log(user.setAge(40));                    // output undefined
+console.log(user.setAge(40));                    // output undefined if we not use return 
 console.log(user.getAge());
 
 console.log(Object.keys(user));                  // to get only keys 
 console.log(Object.values(user));                  // to get only values
 
-Object.keys(user).forEach(key => {               // to get values 
+Object.keys(user).forEach(key => {               // to get keys & values 
     console.log(`${key} : ${user[key]}`);  
 });
 
