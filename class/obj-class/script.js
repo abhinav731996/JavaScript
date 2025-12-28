@@ -39,3 +39,19 @@ Object.entries(user).forEach(([key, value]) => {
         console.log(`${key} : ${value}`);
     }
 });
+
+
+const employee = {
+    empId : 1001,
+
+}
+
+console.log(employee);
+Object.assign(employee, user);
+console.log(employee);
+
+for (const key in user){
+     if(!(typeof user[key] == 'function')){
+        console.log(`${key} : ${user[key]}`);
+    }
+}
