@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+<body>
+    <header>
+        <h1>JavaScript Events</h1>
+    </header>
+    <main>
+        <h2>Click</h2>
+        <button id="click">Button</button>
+    </main>
+    <script>
+        let button = document.getElementById("click");
+        button.addEventListener("click", () => {
+            alert("button clicked");
+
+        });
+
+        button.addEventListener("mouseover", () => {
+            console.log("cursor is on button");
+            
+        });
+        button.addEventListener("mouseout", () => {
+            console.log("cursor remove from button");
+            
+        });
+         
+    </script>
+</body>
+</html>
