@@ -52,7 +52,7 @@ newsLetterForm.addEventListener("submit", function (e) {
   console.log(input.value.length);
   if (!(input.value.length >= 6)) {
     e.preventDefault();
-  }
+  } 
 });
 
 // input.addEventListener('change', function(){
@@ -72,9 +72,7 @@ inputs.forEach((el) => {
 });
 
 let submitBtn = document.querySelector('form input[type="submit"]');
-submitBtn.addEventListener(
-  "click",
-  function (e) {
+submitBtn.addEventListener("click", function (e) {
     console.log("log from submit button");
     console.log(e.target);
   },
@@ -82,9 +80,7 @@ submitBtn.addEventListener(
 );
 
 let table = document.querySelector("table");
-table.addEventListener(
-  "click",
-  function (e) {
+table.addEventListener("click", function (e) {
     if (e.target.classList.contains("delete")) {
       let id = e.target.dataset.id;
       console.log(id); // APi call to delete this record
@@ -98,8 +94,7 @@ table.addEventListener(
       console.log(currentStatus);
 
       if (currentStatus === "Active") {
-        e.target.closest("tr").querySelector(".status").textContent =
-          "Inactive";
+        e.target.closest("tr").querySelector(".status").textContent = "Inactive";
         e.target.textContent = "Active";
       } else {
         e.target.closest("tr").querySelector(".status").textContent = "Active";
