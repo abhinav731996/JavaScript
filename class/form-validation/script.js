@@ -7,7 +7,7 @@ contactForm.addEventListener("submit", (e)=>{
     let phoneEl = contactForm.querySelector("#mobile");
     let name = nameEl?.value?.trim();
     let email = emailEl?.value?.trim();
-    let contect = phoneEl?.value?.trim();
+    let contact = phoneEl?.value?.trim();
     // console.log(name);
     let hasError = false;
 

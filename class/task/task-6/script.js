@@ -17,12 +17,10 @@ async function fetchUsers() {
         const card = document.createElement("div");
         card.className = "user-card";
 
-        card.innerHTML = `
-        <h3>${user.name.firstname} ${user.name.lastname}</h3>
+        card.innerHTML = `<h3>${user.name.firstname} ${user.name.lastname}</h3>
         <p><strong>Email:</strong> ${user.email}</p>
         <p><strong>Username:</strong> ${user.username}</p>
-        <p><strong>City:</strong> ${user.address.city}</p>
-        `;
+        <p><strong>City:</strong> ${user.address.city}</p>`;
 
         usersContainer.appendChild(card);
     });
