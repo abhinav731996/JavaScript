@@ -5,6 +5,7 @@ let defaultEl = document.querySelector('#default');
 let debounceEl = document.querySelector('#debounce');
 let throttleEl = document.querySelector('#throttle');
 
+
 // ------ for mouse move ------
 let movedefaultEl = document.querySelector('#movedefault');
 let movedebounceEl = document.querySelector('#movedebounce');
