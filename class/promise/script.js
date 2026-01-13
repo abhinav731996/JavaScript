@@ -37,7 +37,7 @@
 
 
 
-// ------- using async/await method (in this error is occure)--------
+// // ------- using async/await method (in this error is occure)--------
 
 // function fetchData(number){
 //     return new Promise((resolve, reject) => {
@@ -47,6 +47,7 @@
 //         },1000);
 //     })
 // };
+
 
 // async function printData() {
 //     let number = prompt("Enter a number");
@@ -70,7 +71,7 @@
 // console.log(timer);
         
 
-let userPromise = fetch("https://jsonplaceholder.typicode.com/users");
-// console.log(userPromise);
+// let userPromise = fetch("https://jsonplaceholder.typicode.com/users");
+// // console.log(userPromise);
 
-userPromise.then((response)=>response.json()).then((data)=>console.log(data))
+// userPromise.then((response)=>response.json()).then((data)=>console.log(data))

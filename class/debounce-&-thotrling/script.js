@@ -6,12 +6,6 @@ let debounceEl = document.querySelector('#debounce');
 let throttleEl = document.querySelector('#throttle');
 
 
-// ------ for mouse move ------
-let movedefaultEl = document.querySelector('#movedefault');
-let movedebounceEl = document.querySelector('#movedebounce');
-let movethrottleEl = document.querySelector('#movethrottle');
-
-
 // ------ textContent -------
 
 let updateDebounceText = debounce((text)=>{
@@ -55,7 +49,13 @@ function throttle(func, delay){
 }
 
 
+
 // --------- Mouse move ---------
+
+
+let movedefaultEl = document.querySelector('#movedefault');
+let movedebounceEl = document.querySelector('#movedebounce');
+let movethrottleEl = document.querySelector('#movethrottle');
 
 let defaultCount = 0;
 let debounceCount = 0;
