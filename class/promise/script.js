@@ -71,8 +71,7 @@
 // console.log(timer);
         
 
-// let userPromise = fetch("https://jsonplaceholder.typicode.com/users");
-// // console.log(userPromise);
+let userPromise = fetch("https://jsonplaceholder.typicode.com/users");
+// console.log(userPromise);
 
-// userPromise.then((response)=>response.json()).then((data)=>console.log(data))
-
+userPromise.then((response)=>response.json()).then((data)=>console.log(data))
