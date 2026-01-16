@@ -54,3 +54,66 @@ arr5[5][0]=15;
 
 console.log(arr4);
 console.log(arr5);
+
+
+
+const num = [1,2,3]
+const copy = [...num]
+console.log(copy);
+
+// ---------- merging ---------
+const a = [1,2]
+const b = [3,4]
+const merged = [...a, ...b]
+console.log(merged);
+
+// ---------- adding element ----------
+const number = [2,3]
+const result = [1, ...number, 4]
+
+console.log(result);
+
+
+// -------- coping object --------
+
+let obj2 = {
+    name: "abhi",
+    desigination: "software engineer",
+    company: "indixper",
+    address: {
+        city: "gurgaon",
+        state: "haryana",
+        country: "india"
+    }
+};
+
+// let obj3 = {...obj2}
+let obj3 = JSON.parse(JSON.stringify(obj2))
+
+obj3.address.city = "rohtak";
+
+console.log(obj2);
+console.log(obj3);
+
+
+let p1 = new Promise((resolve, reject) => {
+    resolve ("from prmise");
+})
+
+p1.then((message)=> console.log(message));
+
+let a1 = 10;
+let b1 = 20;
+
+add(a,b);
+
+console.log("from global");
+
+function add(a1,b1) {
+    setTimeout(()=>{
+        console.log("from time out");
+        
+    },1000)
+    console.log(a+b);
+    
+}
