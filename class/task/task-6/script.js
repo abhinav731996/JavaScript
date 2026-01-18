@@ -33,7 +33,3 @@ async function fetchUsers() {
 
 fetchUsers();
 
-
-
-
-
