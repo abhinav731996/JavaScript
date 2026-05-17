@@ -100,23 +100,20 @@
 
 // // #### DOM Event ####
 
-//****** */ add event listener
-document.getElementById("btn").addEventListener("click", function () {
-    alert("Button Clicked!!!")
-})
+// //****** */ add event listener
+// document.getElementById("btn").addEventListener("click", function () {
+//     alert("Button Clicked!!!")
+// })
 
-// ******** remove event listener
+// // ******** remove event listener
 
-const addBtn = document.getElementById("addBtn");
-const removeBtn = document.getElementById("removeBtn");
+// const addBtn = document.getElementById("addBtn");
+// const removeBtn = document.getElementById("removeBtn");
 
-function sayHello() {
-    alert("Hello Codder !!")
-}
+// function sayHello() {
+//     alert("Hello Codder !!")
+// }
 
-addBtn.addEventListener("click", sayHello);
-removeBtn.addEventListener("click", )
-
-
-
+// addBtn.addEventListener("click", sayHello);
+// removeBtn.addEventListener("click", )
 
