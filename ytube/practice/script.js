@@ -10,7 +10,7 @@
 // console.log(arr);
 
 
-// ************* practice **************
+// // ************* practice **************
 
 // console.log(0.2 + 0.3 === 0.5);
 // console.log(0.2 + 0.3 == 0.5);
@@ -116,4 +116,30 @@
 
 // addBtn.addEventListener("click", sayHello);
 // removeBtn.addEventListener("click", )
+
+
+// //******************Objects***************
+
+const user = {
+    id: 101,
+    full_name: "Abhinav Sharma",
+    age: 29,
+    "permanent-address": "Rohtak, Haryana",
+    getAge: function () {
+        return this.age;
+    },
+    setAge: function (num){
+        return this.age = num;
+    }
+}
+
+console.log(user);
+
+console.log(user.full_name);
+
+console.log(user['permanent-address']);
+
+console.log(user.getAge());
+console.log(user.setAge(40));
+console.log(user.age);
 
