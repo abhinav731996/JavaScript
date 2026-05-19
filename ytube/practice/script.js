@@ -118,28 +118,126 @@
 // removeBtn.addEventListener("click", )
 
 
-// //******************Objects***************
+// //******************Objects******************
 
-const user = {
-    id: 101,
-    full_name: "Abhinav Sharma",
-    age: 29,
-    "permanent-address": "Rohtak, Haryana",
-    getAge: function () {
-        return this.age;
-    },
-    setAge: function (num){
-        return this.age = num;
+// const user = {
+//     id: 101,
+//     full_name: "Abhinav Sharma",
+//     age: 29,
+//     "permanent-address": "Rohtak, Haryana",
+//     getAge: function () {
+//         return this.age;
+//     },
+//     setAge: function (num){
+//         return this.age = num;
+//     }
+// }
+
+// console.log(user);
+
+// console.log(user.full_name);
+
+// console.log(user['permanent-address']);
+
+// console.log(user.getAge());
+// console.log(user.setAge(40));
+// console.log(user.age);
+
+// console.log(Object.keys(user));
+// console.log(Object.values(user));
+
+// // console.log(Object.keys(user).forEach(key => {
+// //     console.log(`${key} : ${user[key]}`);
+    
+// // }));
+
+// // -------- For each loop ---------
+// console.log(Object.keys(user).forEach(key => {
+//     if(!(typeof user[key] == 'function')){
+//         console.log(`${key} : ${user[key]}`);
+//     }
+// }));
+
+// // --------- For in loop ---------
+// for (const key in user) {
+//     if(!(typeof user[key] == 'function'))
+//     {
+//         console.log(`${key} : ${user[key]}`);
+//     }
+// }
+
+
+// // ***************************** Classes **************************
+
+// class user {
+//     constructor(name, phone, username, password) {
+//         this.name = name,
+//         this.phone = phone,
+//         this.username = username,
+//         this.password = password;
+//     }
+//     updatePassword (pass){
+//         return this.password = pass;
+//     }
+//     getUsername(){
+//         return this.username
+//     }
+// }
+
+// let abhi = new user("Abhinav", "9034340569", "abhi903434", "@123143");
+
+// console.log(abhi);
+// console.log(abhi.getUsername());
+// console.log(abhi.updatePassword("123143@"));
+// console.log(abhi);
+
+
+// // ******************* class inheritance ***********************
+// Parent Class
+class User {
+    constructor(name, phone, username, password) {
+        this.name = name;
+        this.phone = phone;
+        this.username = username;
+        this.password = password;
+    }
+
+    login() {
+        return `${this.name} logged in`;
     }
 }
 
-console.log(user);
 
-console.log(user.full_name);
+// Child Class
+class Employee extends User {
 
-console.log(user['permanent-address']);
+    constructor(name, phone, username, password, designation, department) {
 
-console.log(user.getAge());
-console.log(user.setAge(40));
-console.log(user.age);
+        // call parent constructor
+        super(name, phone, username, password);
 
+        this.designation = designation;
+        this.department = department;
+    }
+
+    getDepartment() {
+        return this.department;
+    }
+}
+
+
+// Object Creation
+let emp1 = new Employee(
+    "Abhinav",
+    "9034340569",
+    "abhi@gmail.com",
+    "abhi12",
+    "Software Developer-1",
+    "Frontend"
+);
+
+console.log(emp1);
+
+console.log(emp1.getDepartment());
+
+console.log(emp1.login());
