@@ -105,7 +105,7 @@
 //     alert("Button Clicked!!!")
 // })
 
-// // ******** remove event listener
+// // ******** add/remove event listener **************
 
 // const addBtn = document.getElementById("addBtn");
 // const removeBtn = document.getElementById("removeBtn");
@@ -117,6 +117,42 @@
 // addBtn.addEventListener("click", sayHello);
 // removeBtn.addEventListener("click", )
 
+// ----------------- to remove event listener --------------(importent)----
+const addBtn = document.getElementById("addBtn");
+const removeBtn = document.getElementById("removeBtn");
+
+function sayHello () {
+    alert("Hello world");
+};
+
+addBtn.addEventListener("click", sayHello);
+removeBtn.addEventListener("click", function(){
+    addBtn.removeEventListener("click", sayHello);
+    alert("event listener removed");
+})
+
+// ----------------------- event bubbling & event delegation ------------------
+
+// ---- Event bubbling ----
+const parentDiv = document.getElementById("parent-div");
+const childDiv = document.getElementById("child-div");
+
+parentDiv.addEventListener('click', function(){
+    console.log("parentDiv clicked ");    
+})
+childDiv.addEventListener("click", function(){
+    console.log('childDiv clicked');
+    
+})
+
+// ---- Event Delegation ----
+const parentDivUl = document.getElementById("parent-div-ul");
+parentDivUl.addEventListener("click", function(event){
+    if(event.target.tagName === "LI"){
+        console.log('List Item clicked', event.target.textContent);
+        
+    }
+})
 
 // //******************Objects******************
 
@@ -194,50 +230,76 @@
 
 // // ******************* class inheritance ***********************
 // Parent Class
-class User {
-    constructor(name, phone, username, password) {
-        this.name = name;
-        this.phone = phone;
-        this.username = username;
-        this.password = password;
-    }
+// class User {
+//     constructor(name, phone, username, password) {
+//         this.name = name;
+//         this.phone = phone;
+//         this.username = username;
+//         this.password = password;
+//     }
 
-    login() {
-        return `${this.name} logged in`;
+//     login() {
+//         return `${this.name} logged in`;
+//     }
+// }
+
+
+// // Child Class
+// class Employee extends User {
+
+//     constructor(name, phone, username, password, designation, department) {
+
+//         // call parent constructor
+//         super(name, phone, username, password);
+
+//         this.designation = designation;
+//         this.department = department;
+//     }
+
+//     getDepartment() {
+//         return this.department;
+//     }
+// }
+
+
+// // Object Creation
+// let emp1 = new Employee(
+//     "Abhinav",
+//     "9034340569",
+//     "abhi@gmail.com",
+//     "abhi12",
+//     "Software Developer-1",
+//     "Frontend"
+// );
+
+// console.log(emp1);
+
+// console.log(emp1.getDepartment());
+
+// console.log(emp1.login());
+
+
+
+// ********************** Debouncing ********************
+
+function debounce(func, delay) {
+    let timeoutId;
+    return function(...arg){
+        if(timeoutId){
+            clearTimeout(timeoutId);
+        }
+        timeoutId = setTimeout(()=>{
+            func.apply(this, args);
+        },delay);
     }
 }
 
+const fetchData = (event) => {
+    console.log('Featching data for:', event.target.value);
+};
 
-// Child Class
-class Employee extends User {
+const debounceField = debounce(fetchData, 500);
 
-    constructor(name, phone, username, password, designation, department) {
-
-        // call parent constructor
-        super(name, phone, username, password);
-
-        this.designation = designation;
-        this.department = department;
-    }
-
-    getDepartment() {
-        return this.department;
-    }
-}
-
-
-// Object Creation
-let emp1 = new Employee(
-    "Abhinav",
-    "9034340569",
-    "abhi@gmail.com",
-    "abhi12",
-    "Software Developer-1",
-    "Frontend"
-);
-
-console.log(emp1);
-
-console.log(emp1.getDepartment());
-
-console.log(emp1.login());
+document.getElementById("search").addEventListener('input', debounceField(function(){
+    console.log('input value', event.target.value);
+    },300))
