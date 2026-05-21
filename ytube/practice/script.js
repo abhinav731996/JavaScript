@@ -118,41 +118,41 @@
 // removeBtn.addEventListener("click", )
 
 // ----------------- to remove event listener --------------(importent)----
-const addBtn = document.getElementById("addBtn");
-const removeBtn = document.getElementById("removeBtn");
+// const addBtn = document.getElementById("addBtn");
+// const removeBtn = document.getElementById("removeBtn");
 
-function sayHello () {
-    alert("Hello world");
-};
+// function sayHello () {
+//     alert("Hello world");
+// };
 
-addBtn.addEventListener("click", sayHello);
-removeBtn.addEventListener("click", function(){
-    addBtn.removeEventListener("click", sayHello);
-    alert("event listener removed");
-})
+// addBtn.addEventListener("click", sayHello);
+// removeBtn.addEventListener("click", function(){
+//     addBtn.removeEventListener("click", sayHello);
+//     alert("event listener removed");
+// })
 
 // ----------------------- event bubbling & event delegation ------------------
 
-// ---- Event bubbling ----
-const parentDiv = document.getElementById("parent-div");
-const childDiv = document.getElementById("child-div");
+// // ---- Event bubbling ----
+// const parentDiv = document.getElementById("parent-div");
+// const childDiv = document.getElementById("child-div");
 
-parentDiv.addEventListener('click', function(){
-    console.log("parentDiv clicked ");    
-})
-childDiv.addEventListener("click", function(){
-    console.log('childDiv clicked');
+// parentDiv.addEventListener('click', function(){
+//     console.log("parentDiv clicked ");    
+// })
+// childDiv.addEventListener("click", function(){
+//     console.log('childDiv clicked');
     
-})
+// })
 
-// ---- Event Delegation ----
-const parentDivUl = document.getElementById("parent-div-ul");
-parentDivUl.addEventListener("click", function(event){
-    if(event.target.tagName === "LI"){
-        console.log('List Item clicked', event.target.textContent);
+// // ---- Event Delegation ----
+// const parentDivUl = document.getElementById("parent-div-ul");
+// parentDivUl.addEventListener("click", function(event){
+//     if(event.target.tagName === "LI"){
+//         console.log('List Item clicked', event.target.textContent);
         
-    }
-})
+//     }
+// })
 
 // //******************Objects******************
 
@@ -282,24 +282,47 @@ parentDivUl.addEventListener("click", function(event){
 
 // ********************** Debouncing ********************
 
-function debounce(func, delay) {
-    let timeoutId;
-    return function(...arg){
-        if(timeoutId){
-            clearTimeout(timeoutId);
-        }
-        timeoutId = setTimeout(()=>{
-            func.apply(this, args);
-        },delay);
+// function debounce(func, delay) {
+//     let timeoutId;
+//     return function(...arg){
+//         if(timeoutId){
+//             clearTimeout(timeoutId);
+//         }
+//         timeoutId = setTimeout(()=>{
+//             func.apply(this, args);
+//         },delay);
+//     }
+// }
+
+// const fetchData = (event) => {
+//     console.log('Featching data for:', event.target.value);
+// };
+
+// const debounceField = debounce(fetchData, 500);
+
+// document.getElementById("search").addEventListener('input', debounceField(function(){
+//     console.log('input value', event.target.value);
+//     },300))
+
+
+
+// // ********************* promise, async/await ********************
+
+let myPromise = new Promise((resolve, reject) => {
+    let success = false;
+    if(success){
+        resolve("promise is resolved");
     }
-}
+    else{
+        reject("Promise is rejected");
+    }
+})
 
-const fetchData = (event) => {
-    console.log('Featching data for:', event.target.value);
-};
-
-const debounceField = debounce(fetchData, 500);
-
-document.getElementById("search").addEventListener('input', debounceField(function(){
-    console.log('input value', event.target.value);
-    },300))
+myPromise
+    .then((message) =>{
+        console.log(message);
+    })
+    .catch((error) =>{
+        console.error(error);
+    })
+    
